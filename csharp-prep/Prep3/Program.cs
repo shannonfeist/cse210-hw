@@ -3,8 +3,8 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {   
-              
+    {
+        
         Random randomGenerator = new Random();
         int number = randomGenerator.Next(1, 101);
 
@@ -13,14 +13,13 @@ class Program
         while (guess != number)
         {
             Console.Write("What is your guess? ");
-            string guessinput = Console.ReadLine();
-            guess = int.Parse(guessinput);
-            
-            if (guess < number)
+            guess = int.Parse(Console.ReadLine());
+
+            if (number > guess)
             {
                 Console.WriteLine("Higher");
             }
-            else if (guess > number)
+            else if (number < guess)
             {
                 Console.WriteLine("Lower");
             }
@@ -28,6 +27,7 @@ class Program
             {
                 Console.WriteLine("You guessed it!");
             }
-        }
+
+        }  
     }
 }

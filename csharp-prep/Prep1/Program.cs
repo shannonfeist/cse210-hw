@@ -1,15 +1,16 @@
 using System;
+using System.Runtime.CompilerServices;
 
 class Program
 {
     static void Main(string[] args)
     {
         Console.Write("What is your first name? ");
-        string first = Console.ReadLine();
+        string fName = Console.ReadLine();
 
         Console.Write("What is your last name? ");
-        string last = Console.ReadLine();
+        string lName = Console.ReadLine();
 
-        Console.WriteLine($"Your name is {last}, {first} {last}.");
+        Console.WriteLine($"Your name is {lName}, {fName} {lName}.");
     }
 }
